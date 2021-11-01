@@ -1,38 +1,269 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+
+  font-family: 'Oswald', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  transition: all .5s ease-in-out;
+  background-color: #62645B;
+  margin-right: auto;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+}
+
+body {
+  background-image: url(img/background.svg);
+  background-size: 100vw;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: 0 9vh;
+  height: fit-content;
+}
+
+footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: space-between;
+  flex-shrink: 0;
+  height: 60vh;
+  background-color: #62645B;
+}
+
+a {
+  text-decoration: none;
+  color: #E5E5D9;
+}
+
+.header {
+  background-color: #62645B;
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo {
+  height: 6vh;
+  margin-left: auto;
+  margin-right: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home {
+  height: 45vh;
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.empty-home {
+  width: 50%;
+}
+
+.home-logo {
+  width: 50%;
+}
+
+.about {
+  height: 100vh;
+  font-size: 18px;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.portfolio {
+  height: 100vh;
+  width: 90vw;
+}
+
+.contact-footer {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: #62645B;
+  text-transform: uppercase;
+  text-align: center;
+  height: 30%;
+}
+
+.contact-footer {
+  margin-right: 10px;
+}
+
+.follow-me {
+  text-transform: uppercase;
+  text-align: center;
+  height: 30%;
+}
+
+.follow-me {
+  margin: 0 5px 0 5px;
+  font-size: 36px;
+}
+
+.creator {
+  text-transform: uppercase;
+  text-align: center;
+  height: 40%;
+}
+
+.creator-logo {
+  width: 40%;
+}
+
+.copyrights {
+  background-color: #4C4E46;
+  width: 100%;
+  height: 8vh;
+  line-height: 8vh;
+  text-align: center;
+}
+
+@media screen and (min-width: 533px)
+and (orientation: landscape) {
+
+  .header {
+    height: 15vh;
   }
-  to {
-    transform: rotate(360deg);
+
+  .navbar-logo {
+    height: 12vh;
   }
+
+  .home {
+    height: 115vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: space-between;
+    height: 40vh;
+  }
+
+  .contact-footer {
+    width: 33%;
+  }
+
+  .follow-me {
+    width: 33%;
+  }
+
+  .creator {
+    width: 33%;
+  }
+
+  .creator-logo {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 360px)
+and (orientation: portrait) {
+
+  .header {
+    height: 10vh;
+  }
+
+  .navbar-logo {
+    height: 8vh;
+  }
+
+  .home {
+    height: 45vh;
+  }
+
+  .about {
+    height: 70vh;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-content: space-between;
+    height: 60vh;
+  }
+
+}
+
+@media screen and (min-width: 640px)
+and (orientation: landscape) {
+
+  .header {
+    height: 10vh;
+  }
+
+  .navbar-logo {
+    height: 8vh;
+  }
+
+  .home {
+    height: 120vh;
+  }
+
+  .about {
+    height: 70vh;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: space-between;
+    height: 40vh;
+  }
+
+  .contact-footer {
+    width: 33%;
+  }
+
+  .follow-me {
+    width: 33%;
+  }
+
+  .creator {
+    width: 33%;
+  }
+
+  .creator-logo {
+    width: 50%;
+  }
+
 }
