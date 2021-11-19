@@ -37,7 +37,7 @@ function App() {
         </section>
         <section className="about">
           <div>
-            <h2>Kilka słów o mnie</h2>
+            <h2>O mnie</h2>
             <p>Ukończyłem studia na Politechnice Poznańskiej na kierunku budownictwo, studiowałem także na
               WSNHiD na
               kierunku grafiki projektowej.

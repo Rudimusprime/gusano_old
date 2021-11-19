@@ -108,12 +108,9 @@ a {
 }
 
 .portfolio {
-  width: 90vw;
-  margin: 10px auto 0 auto;
-}
-
-.portfolio h2 {
-  margin-bottom: 10px;
+  width: 85vw;
+  font-size: 18px;
+  margin: 0 auto;
 }
 
 .contact-footer {
@@ -961,6 +958,10 @@ and (orientation: landscape) {
   .about {
     padding: 0 50px 0 50px;
     height: 40vh;
+    font-size: 36px;
+  }
+
+  .portfolio {
     font-size: 36px;
   }
 

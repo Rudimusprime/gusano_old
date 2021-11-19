@@ -49,154 +49,202 @@ const Gallery = () => {
         {
             id: 1,
             imgSrc: Img1,
+            desc: "",
         },
         {
             id: 2,
             imgSrc: Img2,
+            desc: "",
         },
         {
             id: 3,
             imgSrc: Img3,
+            desc: "",
         },
         {
             id: 4,
             imgSrc: Img4,
+            desc: "",
         },
         {
             id: 5,
             imgSrc: Img5,
+            desc: "",
         },
         {
             id: 6,
             imgSrc: Img6,
+            desc: "",
         },
         {
             id: 7,
             imgSrc: Img7,
+            desc: "",
         },
         {
             id: 8,
             imgSrc: Img8,
+            desc: "",
         },
         {
             id: 9,
             imgSrc: Img9,
+            desc: "",
         },
         {
             id: 10,
             imgSrc: Img10,
+            desc: "",
         },
         {
             id: 11,
             imgSrc: Img11,
+            desc: "",
         },
         {
             id: 12,
             imgSrc: Img12,
+            desc: "",
         },
         {
             id: 13,
             imgSrc: Img13,
+            desc: "",
         },
         {
             id: 14,
             imgSrc: Img14,
+            desc: "",
         },
         {
             id: 15,
             imgSrc: Img15,
+            desc: "",
         },
         {
             id: 16,
             imgSrc: Img16,
+            desc: "",
         },
         {
             id: 17,
             imgSrc: Img17,
+            desc: "",
         },
         {
             id: 18,
             imgSrc: Img18,
+            desc: "",
         },
         {
             id: 19,
             imgSrc: Img19,
+            desc: "",
         },
         {
             id: 20,
             imgSrc: Img20,
+            desc: "",
         },
         {
             id: 21,
             imgSrc: Img21,
+            desc: "",
         },
         {
             id: 22,
             imgSrc: Img22,
+            desc: "",
         },
         {
             id: 23,
             imgSrc: Img23,
+            desc: "",
         },
         {
             id: 24,
             imgSrc: Img24,
+            desc: "",
         },
         {
             id: 25,
             imgSrc: Img25,
+            desc: "",
         },
         {
             id: 26,
             imgSrc: Img26,
+            desc: "",
         },
         {
             id: 27,
             imgSrc: Img27,
+            desc: "",
         },
         {
             id: 28,
             imgSrc: Img28,
+            desc: "",
         },
         {
             id: 29,
             imgSrc: Img29,
+            desc: "",
         },
         {
             id: 30,
             imgSrc: Img30,
+            desc: "",
         },
         {
             id: 31,
             imgSrc: Img31,
+            desc: "",
         },
         {
             id: 32,
             imgSrc: Img32,
-        }, {
+            desc: "",
+        },
+        {
             id: 33,
             imgSrc: Img33,
-        }, {
+            desc: "",
+        },
+        {
             id: 34,
             imgSrc: Img34,
-        }, {
+            desc: "",
+        },
+        {
             id: 35,
             imgSrc: Img35,
-        }, {
+            desc: "",
+        },
+        {
             id: 36,
             imgSrc: Img36,
-        }, {
+            desc: "",
+        },
+        {
             id: 37,
             imgSrc: Img37,
-        }, {
+            desc: "",
+        },
+        {
             id: 38,
             imgSrc: Img38,
-        }, {
+            desc: "",
+        },
+        {
             id: 39,
             imgSrc: Img39,
-        }, {
+            desc: "",
+        },
+        {
             id: 40,
             imgSrc: Img40,
+            desc: "",
         },
     ]
     const [model, setModel] = useState(false);
@@ -209,16 +257,20 @@ const Gallery = () => {
     return (
         <>
             <div className={model ? "model open" : "model"}>
-                <img src={tempImgSrc}/>
+                <img src={tempImgSrc}
+                     onClick={() => setModel(false)}/>
                 <CloseIcon onClick={() => setModel(false)}/>
             </div>
             <div className="gallery">
                 {data.map((item, index) => {
                     return (
-                        <div className="pics" key={index} onClick={() =>
-                            getImg(item.imgSrc)
-                        }>
-                            <img src={item.imgSrc} style={{width: '100%'}}/>
+                        <div className="pics"
+                             key={index}
+                             onClick={() =>
+                                 getImg(item.imgSrc)}>
+                            <img src={item.imgSrc}
+                                 style={{width: '100%'}}/>
+                            <p>{item.desc}</p>
                         </div>
                     )
                 })}
